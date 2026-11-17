@@ -1,0 +1,97 @@
+Manual for BengOS
+Introduction
+
+BengOS is a basic command-line interface that allows you to interact with a simplified file system. It provides various commands to navigate, manage directories and files, and perform basic file operations. This manual will guide you through the available commands and their usage.
+Commands
+1. ls
+    Lists the contents of the current directory.Can use for directories.
+    Usage: ls
+
+Optional Parameter:
+
+    -R: Recursively lists the contents of all subdirectories.
+
+2. cd
+
+    Changes the current directory.Can use for directories.
+    Usage: cd [path]
+
+Example:
+
+cd subfolder
+
+3. mkdir
+
+    Creates a new directory.Can use for directories.
+    Usage: mkdir [directory_name]
+
+Example:
+
+mkdir new_directory
+
+4. cp
+
+    Copies a file from a source path to a destination path.Can use for directories and regular files.
+    Usage: cp [source_file] [destination_path]
+
+Example:
+
+cp file.txt newfile
+
+5. rmdir
+
+    Removes an empty directory.Can use for directories.
+    Usage: rmdir [directory_name]
+
+Example:
+
+rmdir old_directory
+
+6. rm
+
+    Removes a regular or soft linked file.Can use for regular or soft linked files.
+    Usage: rm [file]
+
+Example:
+
+rm file.txt
+
+7. cat
+
+    Displays the content of a file.Can use for directories and regular files.Calls ls if used for a directory.
+    Usage: cat [file_name]
+
+Example:
+
+cat document.txt
+
+8. link
+
+    Creates a soft link to a file.Can use for directories and regular files.
+    Usage: link [source_file] [destination_file]
+
+Example:
+
+link original_file.txt linked_file.txt
+
+9. exit
+
+    Exits the shell.
+
+Additional Information
+
+    The shell provides an interactive environment where you can enter commands one at a time.
+
+    File sizes are displayed in bytes.
+    
+    The shell uses the file named "filesystem.txt" to keep the data and for loading and saving the shell.
+    
+    Soft linked files are deleted if the file they point to gets deleted.
+
+Caution
+
+    The file system has a limited disk space of 10 MB.
+
+    The shell will display a warning if the disk space is nearly full.
+
+    Use the exit command to exit the shell.

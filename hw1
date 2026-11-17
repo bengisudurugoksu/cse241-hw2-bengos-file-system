@@ -1,0 +1,71 @@
+/*#ifndef CHESS_H
+#define CHESS_H
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class Pieces{
+public:
+    enum class Type{
+        Pawn,
+        Knight,
+        Bishop,
+        Rook,
+        Queen,
+        King,
+        Empty
+    };
+
+    enum class Color{
+        Black,
+        White,
+        Empty
+    };
+
+    friend class ChessBoard;
+    Pieces(): type(Type::Empty), color(Color::Empty) {}
+    Type getType() const{return type;}
+    Color getColor() const{return color;}
+    void setType(Type type1);
+    void setColor(Color color1);
+
+
+private:
+    Type type;
+    Color color;
+
+};
+// Class representing the chessboard
+class ChessBoard{
+public:
+    ChessBoard() : turn(0){
+        board.resize(8, vector<Pieces>(8));
+        initializeBoard();
+    }
+    void printBoard() const;
+    bool gameover(); //
+    void initializeBoard(); 
+    bool LegalMove(int firstnum, int secondnum, int thirdnum, int fourthnum, int turn);
+    bool KnightLegalMove(int firstnum, int secondnum, int thirdnum, int fourthnum);
+    bool Check(int turn);
+    bool Checkmate(int turn);
+    bool PawnLegalMove(int firstnum, int secondnum, int thirdnum, int fourthnum);
+    bool BishopLegalMove(int firstnum, int secondnum, int thirdnum, int fourthnum);
+    bool QueenLegalMove(int firstnum, int secondnum, int thirdnum, int fourthnum);
+    bool KingLegalMove(int firstnum, int secondnum, int thirdnum, int fourthnum);
+    bool RookLegalMove(int firstnum, int secondnum, int thirdnum, int fourthnum);
+    double score(int turn);
+    void separateInput(string move);
+    bool UnderAttack(int arow, int acol);
+    void CheckWarning(bool value, int turn);
+    void WhitePlays();
+    void BlackPlays();
+    int getTurn() const {return turn;}
+
+private:
+    vector<vector<Pieces>> board;
+    int turn;
+};
+#endif*/
